@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  background-color: #eee;
+  padding: 20px;
+}
+img {
+  display: inline-block;
+  width: 95px;
+  height: 70px;
+}
+
+@media (min-width: 600px) {
+  table {
+    width: 80%;
+  }
+}

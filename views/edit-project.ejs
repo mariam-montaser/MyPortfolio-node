@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs')%>
+<%- include('./partials/navbar.ejs')%>
+
+<div class="card mt-5 mx-auto" style="width: 60%;">
+    <h3 class="mt-3 text-center">Edit Project</h3>
+    <div class="card-body">
+        <form action="/projects/edit/<%= project._id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<%= project._id%>">
+            <div class="form-group">
+                <label for="projectName">Project Name: </label>
+                <input type="text" class="form-control" id="projectName" value="<%= project.projectName%>" name="projectName" required>
+            </div>
+            <div class="form-group">
+                <label for="projectLink">Project Link: </label>
+                <input type="text" class="form-control" id="projectLink" value="<%= project.projectLink%>" name="projectLink" required>
+            </div>
+            <div class="form-group">
+                <label for="githubLink">Github Link: </label>
+                <input type="text" class="form-control" id="githubLink" value="<%= project.githubLink%>" name="githubLink" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image: </label>
+                <input type="file" id="image" name="image">
+            </div>
+            <button type="submit" class="btn btn-primary text-center form-control">Update</button>
+        </form>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs')%>
